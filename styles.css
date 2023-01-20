@@ -11,7 +11,6 @@ body {
   font-family: "Inter", sans-serif;
   font-weight: 200;
   color: #fff;
-  /* background-image: url("assets/background_dark.png"); */
   background-color: #202020;
   background-size: cover;
 }
@@ -129,5 +128,20 @@ footer a:hover {
 }
 
 @media screen and (max-width: 600px) {
-  #back-content;
+  body {
+    background-color: #282828;
+  }
+
+  header h1 {
+    font-size: 32px;
+    max-width: 320px;
+  }
+
+  header p {
+    max-width: 300px;
+  }
+
+  #back-content {
+    height: 100vh;
+  }
 }
