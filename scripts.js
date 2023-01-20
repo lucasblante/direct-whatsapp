@@ -28,6 +28,27 @@ inputText.addEventListener("focusout", function () {
   inputText.style = "border-bottom: 3px solid #fff";
 });
 
+inputSubmit.addEventListener("click", function () {
+  var text;
+
+  if (inputPhone.value != "") {
+    if (inputText.value != "") {
+      text = inputText.value
+        .replaceAll(" ", "+")
+        .replaceAll("?", "%3F")
+        .replaceAll("!", "%21");
+    } else {
+      const saudacao = getSaudacao();
+      text = `${saudacao}+%C3%89+da+THS+Inform%C3%A1tica%21+Tudo+bem%3F`;
+    }
+    link.target = "_blank";
+    link.href = `https://api.whatsapp.com/send?phone=${inputPhone.value}&text=${text}`;
+  } else {
+    alert("Verifique o número de telefone digitado.");
+    inputPhone.style = "border-bottom: 3px solid #e53d30";
+  }
+});
+
 function getSaudacao() {
   const date = new Date();
   const hour = date.getHours();
@@ -40,21 +61,3 @@ function getSaudacao() {
     return "Boa Noite!";
   }
 }
-
-inputSubmit.addEventListener("click", function () {
-  var text;
-
-  if (inputPhone.value != "") {
-    if (inputText.value != "") {
-      text = inputText.value.replace(" ", "+");
-    } else {
-      const saudacao = getSaudacao();
-      text = `${saudacao}+%C3%89+da+THS+Inform%C3%A1tica%21+Tudo+bem%3F`;
-    }
-    link.target = "_blank";
-    link.href = `https://api.whatsapp.com/send?phone=${inputPhone.value}&text=${text}`;
-  } else {
-    alert("Verifique o número de telefone digitado.");
-    inputPhone.style = "border-bottom: 3px solid #e53d30";
-  }
-});
