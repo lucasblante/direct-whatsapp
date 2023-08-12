@@ -7,9 +7,9 @@
 
 body {
   display: flex;
-  margin-top: 12vh;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 200;
+  margin-top: 12vh;
   color: #fff;
   background-color: #202020;
   background-size: cover;
@@ -19,7 +19,7 @@ body {
   display: flex;
   flex-direction: column;
   align-content: center;
-  border-radius: 20px;
+  border-radius: 15px;
   margin: 0 auto;
   min-height: 500px;
   max-height: 80vh;
@@ -40,12 +40,18 @@ header {
 
 header h1 {
   font-weight: 600;
-  font-size: 40px;
+  font-size: 50px;
+  font-family: 'Genos', sans-serif;
 }
 
 header p {
   max-width: 400px;
   margin-top: 5px;
+  font-size: 1.1rem;
+}
+
+header strong {
+  text-align: center;
 }
 
 /* --- CONTENT --- */
@@ -54,13 +60,13 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 5vh;
+  margin-top: 3vh;
   height: 100%;
 }
 
 input {
   width: 400px;
-  height: 40px;
+  height: 50px;
   background-color: #202020;
   margin-top: 20px;
   font-size: 18px;
@@ -70,6 +76,7 @@ input {
   border-style: none;
   border-bottom: 3px solid #fff;
   outline: none;
+  border-radius: 5px;
 }
 
 input:hover {
@@ -80,8 +87,8 @@ input:hover {
   display: flex;
   flex-direction: column;
   width: 120px;
-  height: 40px;
-  background-color: #25d366;
+  height: 60px;
+  background-color: #16826b;
   cursor: pointer;
   text-align: center;
   justify-content: center;
@@ -89,15 +96,49 @@ input:hover {
   margin-top: 20px;
   margin-bottom: 50px;
   font-weight: 400;
+  font-size: large;
+  margin: 5px;
 }
 
 #submit:hover {
-  background-color: #188c43;
+  background-color: #025c4c;
 }
 
 #submit a {
   text-decoration: none;
   color: #fff;
+  font-weight: bold;
+}
+
+#warning {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 5px;
+  margin-top: 10px;
+  background-color: #16826b;
+  border-radius: 5px;
+  width: 200px;
+  height: 60px;
+  margin: 5px;
+  justify-content: center;
+}
+
+#warning:hover {
+  background-color: #025c4c;
+}
+
+#warning a {
+  text-decoration: none;
+  color: white;
+  font-weight: normal;
+  font-size: small;
+}
+
+#buttons {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
 }
 
 /* --- FOOTER --- */
@@ -107,6 +148,7 @@ footer {
   flex-direction: column;
   align-items: center;
   margin-bottom: 15px;
+  margin-top: 3vh;
   font-size: 15px;
   color: #e5e5e5;
   padding-bottom: 30px;
@@ -127,7 +169,7 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
-  color: #e7894f;
+  color: white;
 }
 
 @media screen and (max-width: 600px) {
